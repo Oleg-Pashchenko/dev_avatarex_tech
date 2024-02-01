@@ -9,3 +9,4 @@ router.register(r'task', TaskDetailViewSet, basename='taskdetail')
 urlpatterns = [
     path('v1/', include(router.urls)),
 ]
+
