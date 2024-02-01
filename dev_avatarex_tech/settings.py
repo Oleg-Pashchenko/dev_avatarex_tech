@@ -17,6 +17,7 @@ ALLOWED_HOSTS = [
 
 
 INSTALLED_APPS = [
+    'corsheaders',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -25,7 +26,13 @@ INSTALLED_APPS = [
     'fss'
 ]
 
-MIDDLEWARE = []
+MIDDLEWARE = [
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = "dev_avatarex_tech.urls"
 
