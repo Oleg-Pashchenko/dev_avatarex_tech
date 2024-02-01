@@ -19,7 +19,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             whoami
-            cd avatarex/dev_avatarex_tech
+            cd dev_avatarex_tech/
             git pull
             docker-compose down
             docker-compose up --build -d 
